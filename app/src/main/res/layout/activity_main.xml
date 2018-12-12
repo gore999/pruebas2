@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/acep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/cancel"
+        app:layout_constraintStart_toEndOf="@+id/Aceptar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/text"
+        app:layout_constraintBottom_toTopOf="@+id/Cancelar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="168dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="52dp"
+        android:onClick="responder"
+        android:text="¿Que es LGTBI?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Aceptar" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="144dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/Cancelar" />
+
+    <EditText
+        android:id="@+id/texto2"
+        android:layout_width="205dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/pista"
+        android:imeOptions="actionSend"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="ToggleButton"
+        android:textOff="@string/apagado"
+        android:textOn="@string/encendido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto2" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:text="Switch"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton"
+        app:layout_constraintTop_toBottomOf="@+id/texto2" />
+
+    <CheckBox
+        android:id="@+id/homeCb"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <CheckBox
+        android:id="@+id/mullerCb"
+        android:layout_width="84dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/muller"
+        app:layout_constraintStart_toStartOf="@+id/homeCb"
+        app:layout_constraintTop_toBottomOf="@+id/homeCb" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <RadioButton
+            android:id="@+id/nazi"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/nazi"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <RadioButton
+            android:id="@+id/comu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Comunista"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="410dp" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/bebidas"
+        android:layout_width="211dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/bebidas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+</android.support.constraint.ConstraintLayout>

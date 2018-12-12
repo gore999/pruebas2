@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bebidas">
+        <item>Whisky</item>
+        <item>Coñac</item>
+        <item>Ginebra</item>
+        <item>Cerveza</item>
+        <item>Jagermeister</item>
+    </string-array>
+</resources>
